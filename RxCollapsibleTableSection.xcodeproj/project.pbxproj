@@ -13,6 +13,7 @@
 		604AE4D41F2634A30027D93A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604AE4D31F2634A30027D93A /* Assets.xcassets */; };
 		604AE4D71F2634A30027D93A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604AE4D51F2634A30027D93A /* LaunchScreen.storyboard */; };
 		604AE4E21F2634A30027D93A /* RxCollapsibleTableSectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4E11F2634A30027D93A /* RxCollapsibleTableSectionTests.swift */; };
+		604AE4ED1F2637230027D93A /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4EC1F2637230027D93A /* FAQViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		604AE4DD1F2634A30027D93A /* RxCollapsibleTableSectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxCollapsibleTableSectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		604AE4E11F2634A30027D93A /* RxCollapsibleTableSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCollapsibleTableSectionTests.swift; sourceTree = "<group>"; };
 		604AE4E31F2634A30027D93A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		604AE4EC1F2637230027D93A /* FAQViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				604AE4CC1F2634A30027D93A /* AppDelegate.swift */,
+				604AE4EC1F2637230027D93A /* FAQViewModel.swift */,
 				604AE4CE1F2634A30027D93A /* FAQViewController.swift */,
 				604AE4D01F2634A30027D93A /* Main.storyboard */,
 				604AE4D31F2634A30027D93A /* Assets.xcassets */,
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604AE4ED1F2637230027D93A /* FAQViewModel.swift in Sources */,
 				604AE4CF1F2634A30027D93A /* FAQViewController.swift in Sources */,
 				604AE4CD1F2634A30027D93A /* AppDelegate.swift in Sources */,
 			);
