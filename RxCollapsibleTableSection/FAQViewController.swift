@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FAQViewController.swift
 //  RxCollapsibleTableSection
 //
 //  Created by Seunghun Lee on 2017-07-24.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FAQViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
 
   override func viewDidLoad() {
