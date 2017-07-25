@@ -12,6 +12,10 @@ class SectionHeader: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
 }
 
+class ItemCell: UITableViewCell {
+  @IBOutlet weak var titleLabel: UILabel!
+}
+
 class RxCollapsibleTableSectionViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
