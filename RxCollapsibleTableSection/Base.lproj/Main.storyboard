@@ -20,12 +20,27 @@
                     <view key="view" contentMode="scaleToFill" id="4qA-rB-zCQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-mz-zni">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ChS-mz-zni" firstAttribute="top" secondItem="4qA-rB-zCQ" secondAttribute="top" id="Dxt-zR-xz4"/>
+                            <constraint firstItem="TPu-IE-mDQ" firstAttribute="top" secondItem="ChS-mz-zni" secondAttribute="bottom" id="sSo-gl-XGR"/>
+                            <constraint firstAttribute="trailing" secondItem="ChS-mz-zni" secondAttribute="trailing" id="xHw-if-cnT"/>
+                            <constraint firstItem="ChS-mz-zni" firstAttribute="leading" secondItem="4qA-rB-zCQ" secondAttribute="leading" id="yVk-iI-jYT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ChS-mz-zni" id="bYL-xc-AfU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2H-vM-3bV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="142"/>
+            <point key="canvasLocation" x="884" y="141.67916041979012"/>
         </scene>
     </scenes>
 </document>
