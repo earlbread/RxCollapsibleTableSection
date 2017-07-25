@@ -21,6 +21,7 @@ class FAQItem {
   var rowCount: Int {
     return 1
   }
+  var isCollapsed = true
 
   var question: String
   var answer: String
@@ -33,7 +34,6 @@ class FAQItem {
 
 class FAQViewModel {
   var items: [FAQItem]
-  var isCollapsed = true
 
   init(items: [FAQItem]) {
     self.items = items
