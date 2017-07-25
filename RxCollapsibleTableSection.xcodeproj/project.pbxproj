@@ -8,15 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		604AE4CD1F2634A30027D93A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4CC1F2634A30027D93A /* AppDelegate.swift */; };
-		604AE4CF1F2634A30027D93A /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4CE1F2634A30027D93A /* FAQViewController.swift */; };
 		604AE4D21F2634A30027D93A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604AE4D01F2634A30027D93A /* Main.storyboard */; };
 		604AE4D41F2634A30027D93A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604AE4D31F2634A30027D93A /* Assets.xcassets */; };
 		604AE4D71F2634A30027D93A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604AE4D51F2634A30027D93A /* LaunchScreen.storyboard */; };
 		604AE4E21F2634A30027D93A /* RxCollapsibleTableSectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4E11F2634A30027D93A /* RxCollapsibleTableSectionTests.swift */; };
-		604AE4ED1F2637230027D93A /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4EC1F2637230027D93A /* FAQViewModel.swift */; };
-		604AE4EF1F263C470027D93A /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4EE1F263C470027D93A /* QuestionCell.swift */; };
-		604AE4F11F263C530027D93A /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4F01F263C530027D93A /* AnswerCell.swift */; };
-		604AE4F51F26CC9D0027D93A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4F41F26CC9D0027D93A /* Extensions.swift */; };
+		60C194261F278FC0004DF3BE /* RxCollapsibleTableSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C194251F278FC0004DF3BE /* RxCollapsibleTableSectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +28,6 @@
 /* Begin PBXFileReference section */
 		604AE4C91F2634A30027D93A /* RxCollapsibleTableSection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCollapsibleTableSection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		604AE4CC1F2634A30027D93A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		604AE4CE1F2634A30027D93A /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		604AE4D11F2634A30027D93A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		604AE4D31F2634A30027D93A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		604AE4D61F2634A30027D93A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,10 +35,7 @@
 		604AE4DD1F2634A30027D93A /* RxCollapsibleTableSectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxCollapsibleTableSectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		604AE4E11F2634A30027D93A /* RxCollapsibleTableSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCollapsibleTableSectionTests.swift; sourceTree = "<group>"; };
 		604AE4E31F2634A30027D93A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		604AE4EC1F2637230027D93A /* FAQViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
-		604AE4EE1F263C470027D93A /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
-		604AE4F01F263C530027D93A /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
-		604AE4F41F26CC9D0027D93A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		60C194251F278FC0004DF3BE /* RxCollapsibleTableSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCollapsibleTableSectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				604AE4CC1F2634A30027D93A /* AppDelegate.swift */,
-				604AE4EE1F263C470027D93A /* QuestionCell.swift */,
-				604AE4F01F263C530027D93A /* AnswerCell.swift */,
-				604AE4EC1F2637230027D93A /* FAQViewModel.swift */,
-				604AE4CE1F2634A30027D93A /* FAQViewController.swift */,
-				604AE4F41F26CC9D0027D93A /* Extensions.swift */,
+				60C194251F278FC0004DF3BE /* RxCollapsibleTableSectionViewController.swift */,
 				604AE4D01F2634A30027D93A /* Main.storyboard */,
 				604AE4D31F2634A30027D93A /* Assets.xcassets */,
 				604AE4D51F2634A30027D93A /* LaunchScreen.storyboard */,
@@ -213,12 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604AE4ED1F2637230027D93A /* FAQViewModel.swift in Sources */,
-				604AE4F51F26CC9D0027D93A /* Extensions.swift in Sources */,
-				604AE4EF1F263C470027D93A /* QuestionCell.swift in Sources */,
-				604AE4CF1F2634A30027D93A /* FAQViewController.swift in Sources */,
+				60C194261F278FC0004DF3BE /* RxCollapsibleTableSectionViewController.swift in Sources */,
 				604AE4CD1F2634A30027D93A /* AppDelegate.swift in Sources */,
-				604AE4F11F263C530027D93A /* AnswerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +414,7 @@
 				604AE4E81F2634A30027D93A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		604AE4E91F2634A30027D93A /* Build configuration list for PBXNativeTarget "RxCollapsibleTableSectionTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +423,7 @@
 				604AE4EB1F2634A30027D93A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
