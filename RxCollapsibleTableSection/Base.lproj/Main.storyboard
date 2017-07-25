@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xwk-Ij-9wW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qh0-Xd-gHi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rx Collapsible Table Section View Controller-->
+        <!--RxCollapsibleTableSection-->
         <scene sceneID="2s7-al-I0q">
             <objects>
                 <viewController id="Xwk-Ij-9wW" customClass="RxCollapsibleTableSectionViewController" customModule="RxCollapsibleTableSection" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,11 +34,30 @@
                             <constraint firstItem="ChS-mz-zni" firstAttribute="leading" secondItem="4qA-rB-zCQ" secondAttribute="leading" id="yVk-iI-jYT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="RxCollapsibleTableSection" id="Lbx-yo-QYy"/>
                     <connections>
                         <outlet property="tableView" destination="ChS-mz-zni" id="bYL-xc-AfU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2H-vM-3bV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1823.2" y="141.67916041979012"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LbR-IN-IAd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qh0-Xd-gHi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0vf-B9-V9K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xwk-Ij-9wW" kind="relationship" relationship="rootViewController" id="Ex4-ID-j7B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="535-86-4vA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884" y="141.67916041979012"/>
         </scene>
