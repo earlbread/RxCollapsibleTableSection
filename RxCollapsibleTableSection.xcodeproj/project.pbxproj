@@ -16,6 +16,7 @@
 		604AE4ED1F2637230027D93A /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4EC1F2637230027D93A /* FAQViewModel.swift */; };
 		604AE4EF1F263C470027D93A /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4EE1F263C470027D93A /* QuestionCell.swift */; };
 		604AE4F11F263C530027D93A /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4F01F263C530027D93A /* AnswerCell.swift */; };
+		604AE4F51F26CC9D0027D93A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AE4F41F26CC9D0027D93A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		604AE4EC1F2637230027D93A /* FAQViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 		604AE4EE1F263C470027D93A /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		604AE4F01F263C530027D93A /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		604AE4F41F26CC9D0027D93A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				604AE4F01F263C530027D93A /* AnswerCell.swift */,
 				604AE4EC1F2637230027D93A /* FAQViewModel.swift */,
 				604AE4CE1F2634A30027D93A /* FAQViewController.swift */,
+				604AE4F41F26CC9D0027D93A /* Extensions.swift */,
 				604AE4D01F2634A30027D93A /* Main.storyboard */,
 				604AE4D31F2634A30027D93A /* Assets.xcassets */,
 				604AE4D51F2634A30027D93A /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				604AE4ED1F2637230027D93A /* FAQViewModel.swift in Sources */,
+				604AE4F51F26CC9D0027D93A /* Extensions.swift in Sources */,
 				604AE4EF1F263C470027D93A /* QuestionCell.swift in Sources */,
 				604AE4CF1F2634A30027D93A /* FAQViewController.swift in Sources */,
 				604AE4CD1F2634A30027D93A /* AppDelegate.swift in Sources */,

@@ -11,8 +11,11 @@ import UIKit
 class FAQViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
 
+  let viewModel = FAQViewModel()
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    tableView.dataSource = viewModel
   }
 
 }
