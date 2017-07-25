@@ -16,6 +16,18 @@ class ItemCell: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
 }
 
+struct Section {
+  var title: String
+  var items: [String]
+  var collapsed: Bool
+
+  init(title: String, items: [String], collapsed: Bool = false) {
+    self.title = title
+    self.items = items
+    self.collapsed = collapsed
+  }
+}
+
 class RxCollapsibleTableSectionViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
