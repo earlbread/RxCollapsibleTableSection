@@ -77,6 +77,7 @@ extension RxCollapsibleTableSectionViewController: UITableViewDelegate {
     }
 
     header.titleLabel.text = sections[section].model
+    header.frame = CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 44.0)
 
     let headerView = UIView()
     headerView.addSubview(header)
