@@ -35,12 +35,13 @@ class RxCollapsibleTableSectionViewController: UIViewController {
 
   let disposeBag = DisposeBag()
   let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, String>>()
+  var sections = [SectionModel<String, String>]()
 
   @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let sections = [
+    sections = [
       SectionModel(model: "Section1", items: ["Item 1-1", "Item 1-2", "Item 1-3"]),
       SectionModel(model: "Section2", items: ["Item 2-1", "Item 2-2", "Item 2-3"]),
       SectionModel(model: "Section3", items: ["Item 3-1", "Item 3-2", "Item 3-3"])
@@ -59,6 +60,31 @@ class RxCollapsibleTableSectionViewController: UIViewController {
     Observable.just(sections)
       .bind(to: tableView.rx.items(dataSource: dataSource))
       .disposed(by: disposeBag)
+
+    tableView.rx
+      .setDelegate(self)
+      .disposed(by: disposeBag)
   }
 
+}
+
+extension RxCollapsibleTableSectionViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let identifier = String(describing: SectionHeader.self)
+    guard let header = tableView.dequeueReusableCell(withIdentifier: identifier)
+      as? SectionHeader else {
+        fatalError("Could not dequeue cell with \(identifier)")
+    }
+
+    header.titleLabel.text = sections[section].model
+
+    let headerView = UIView()
+    headerView.addSubview(header)
+
+    return headerView
+  }
+
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 44.0
+  }
 }
