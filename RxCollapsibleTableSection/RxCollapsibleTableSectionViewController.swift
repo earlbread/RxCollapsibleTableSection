@@ -13,6 +13,15 @@ import RxDataSources
 
 class SectionHeader: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
+  var section: Int = 0
+
+  override func awakeFromNib() {
+    addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapHeader)))
+  }
+
+  func tapHeader(_ gestureRecognizer: UITapGestureRecognizer) {
+    print("Section\(section) is tapped")
+  }
 }
 
 class ItemCell: UITableViewCell {
@@ -76,6 +85,7 @@ extension RxCollapsibleTableSectionViewController: UITableViewDelegate {
         fatalError("Could not dequeue cell with \(identifier)")
     }
 
+    header.section = section
     header.titleLabel.text = sections[section].model
     header.frame = CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 44.0)
 
