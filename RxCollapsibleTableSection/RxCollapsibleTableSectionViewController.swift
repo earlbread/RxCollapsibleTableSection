@@ -14,13 +14,15 @@ import RxDataSources
 class SectionHeader: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
   var section: Int = 0
+  var collapsed = false
 
   override func awakeFromNib() {
     addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapHeader)))
   }
 
   func tapHeader(_ gestureRecognizer: UITapGestureRecognizer) {
-    print("Section\(section) is tapped")
+    print("Section\(section) is tapped, \(collapsed)")
+    collapsed = !collapsed
   }
 }
 
