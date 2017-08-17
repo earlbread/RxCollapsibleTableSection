@@ -33,7 +33,7 @@ class ItemCell: UITableViewCell {
 struct Section {
   var title: String
   var items: [String]
-  var collapsed: Bool
+  var collapsed = false
 
   init(title: String, items: [String], collapsed: Bool = false) {
     self.title = title
@@ -42,20 +42,27 @@ struct Section {
   }
 }
 
+extension Section: SectionModelType {
+  init(original: Section, items: [String]) {
+    self.title = original.title
+    self.items = original.items
+  }
+}
+
 class RxCollapsibleTableSectionViewController: UIViewController {
 
   let disposeBag = DisposeBag()
-  let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, String>>()
-  var sections = [SectionModel<String, String>]()
+  let dataSource = RxTableViewSectionedReloadDataSource<Section>()
+  var sections = [Section]()
 
   @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
     super.viewDidLoad()
 
     sections = [
-      SectionModel(model: "Section1", items: ["Item 1-1", "Item 1-2", "Item 1-3"]),
-      SectionModel(model: "Section2", items: ["Item 2-1", "Item 2-2", "Item 2-3"]),
-      SectionModel(model: "Section3", items: ["Item 3-1", "Item 3-2", "Item 3-3"])
+      Section(title: "Section1", items: ["Item 1-1", "Item 1-2", "Item 1-3"]),
+      Section(title: "Section2", items: ["Item 2-1", "Item 2-2", "Item 2-3"]),
+      Section(title: "Section3", items: ["Item 3-1", "Item 3-2", "Item 3-3"])
     ]
 
     dataSource.configureCell = { (dataSource, tableView, indexPath, sectionItem) in
@@ -88,7 +95,7 @@ extension RxCollapsibleTableSectionViewController: UITableViewDelegate {
     }
 
     header.section = section
-    header.titleLabel.text = sections[section].model
+    header.titleLabel.text = sections[section].title
     header.frame = CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 44.0)
 
     let headerView = UIView()
