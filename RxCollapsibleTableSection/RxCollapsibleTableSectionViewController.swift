@@ -14,15 +14,18 @@ import RxDataSources
 class SectionHeader: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
   var section: Int = 0
-  var collapsed = false
+  var controller: RxCollapsibleTableSectionViewController?
+  var tableView: UITableView?
 
   override func awakeFromNib() {
     addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapHeader)))
   }
 
   func tapHeader(_ gestureRecognizer: UITapGestureRecognizer) {
-    print("Section\(section) is tapped, \(collapsed)")
-    collapsed = !collapsed
+    if let collapsed = controller?.sections[section].collapsed {
+      controller?.sections[section].collapsed = !collapsed
+      tableView?.reloadSections(IndexSet(integer: section), with: .automatic)
+    }
   }
 }
 
@@ -96,6 +99,8 @@ extension RxCollapsibleTableSectionViewController: UITableViewDelegate {
 
     header.section = section
     header.titleLabel.text = sections[section].title
+    header.controller = self
+    header.tableView = tableView
     header.frame = CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 44.0)
 
     let headerView = UIView()
@@ -106,5 +111,13 @@ extension RxCollapsibleTableSectionViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 44.0
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    let collapsed = sections[indexPath.section].collapsed
+
+    return collapsed
+      ? 0.0
+      : 44.0
   }
 }
